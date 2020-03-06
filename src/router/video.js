@@ -4,7 +4,7 @@ const router = express.Router()
 const {
     readVid,
     addVid
-} =require('../controller/video')
+} = require('../controller/video')
 
 router
     .get('/', readVid)

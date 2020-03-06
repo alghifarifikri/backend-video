@@ -2,7 +2,7 @@ require('dotenv/config')
 const express = require('express')
 const server = express()
 const bodyParser = require('body-parser')
-// const route = require('./src/route/index')
+const router = require('./src/router/index')
 const cors = require('cors')
 const morgan = require('morgan')
 const PORT = process.env.SERVER_PORT;
@@ -16,6 +16,6 @@ server.listen(PORT, ()=>{
     
 })
 server.use(morgan('dev'))
-// server.use('/', route)
+server.use('/', router)
 
 module.exports = server

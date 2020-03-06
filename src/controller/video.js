@@ -5,7 +5,7 @@ const moment = require('moment')
 module.exports = {
     readVid: async(req, res) => {
         try{
-            const result = await video.readMovie();
+            const result = await video.readVid();
             response(res, 200, {movies: result})
         }catch(error){
             response(res, 500, {message: "server error", error:error})
@@ -30,7 +30,7 @@ module.exports = {
             };
             console.log(body);
             
-            const result = await video.addMovie(body);
+            const result = await video.addVid(body);
             response(res, 200, {message: "user is added"})
         }catch(error){
             response(res, 200, {message: "user was there", error:error})
