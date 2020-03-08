@@ -16,8 +16,10 @@ module.exports = {
                 status: 1
             };
             const result = await modelUsers.verifyUser(body.status, email, password);
+            console.log(result)
             let match = result.message.split(' ')[2];
             let change = result.message.split(' ')[5]
+            console.log(match, change)
             if(match == 1) {
                 if(change == 1){
                     const result = await modelUsers.login(email, password)

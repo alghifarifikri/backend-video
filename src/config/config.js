@@ -12,6 +12,6 @@ dbConn.connect((err)=>{
     if(err)
     console.log('Not Connect to Database', err)
     else
-    console.log('Database Connected')
+    console.log('Server Activated!')
 })
 module.exports = dbConn
